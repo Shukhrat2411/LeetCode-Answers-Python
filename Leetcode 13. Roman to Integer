@@ -1,0 +1,8 @@
+class Solution:
+    def romanToInt(self, S: str) -> int:
+        ans = 0
+        for i in range(len(S)-1,-1,-1):
+            num = roman[S[i]]
+            if 4 * num < ans: ans -= num
+            else: ans += num
+        return ans
