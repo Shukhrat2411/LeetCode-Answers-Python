@@ -16,7 +16,7 @@ class Solution:
         stack = []
         dictionary = {
              ')': '(',
-            '}': '{',
+             '}': '{',
              ']': '[' }
          
          for x in s:
