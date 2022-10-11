@@ -13,16 +13,16 @@ class Solution:
 
 class Solution:
     def isValid(self, s: str) -> bool:
-      stack = []
-      dictionary = {
-         ')': '(',
-         '}': '{',
-         ']': '[' }
+        stack = []
+        dictionary = {
+             ')': '(',
+            '}': '{',
+             ']': '[' }
          
-      for x in s:
-        if x not in dictionary:
-            stack.append(x)
-        elif not stack or dictionary[x] != stack.pop():
+         for x in s:
+            if x not in dictionary:
+                stack.append(x)
+         elif not stack or dictionary[x] != stack.pop():
             return False
 
-      return stack == []    
+         return stack == []    
