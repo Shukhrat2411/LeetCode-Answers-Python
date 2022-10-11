@@ -1,0 +1,28 @@
+# First way but it takes longer time and uses more memory.
+
+class Solution:
+    def isValid(self, s: str) -> bool:
+        for x in range(len(s)):
+            if len(s) != 0:
+                s = s.replace('()', '').replace('{}', '').replace('[]', '')
+        return len(s) == 0
+        
+        
+        
+#Better and faster way       
+
+class Solution:
+    def isValid(self, s: str) -> bool:
+      stack = []
+      dictionary = {
+         ')': '(',
+         '}': '{',
+         ']': '[' }
+         
+      for x in s:
+        if x not in dictionary:
+            stack.append(x)
+        elif not stack or dictionary[x] != stack.pop():
+            print(False)
+
+      print(stack == [])    
