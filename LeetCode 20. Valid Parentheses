@@ -23,6 +23,6 @@ class Solution:
         if x not in dictionary:
             stack.append(x)
         elif not stack or dictionary[x] != stack.pop():
-            print(False)
+            return False
 
-      print(stack == [])    
+      return stack == []    
