@@ -1,0 +1,4 @@
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        newString = "".join(x for x in s.replace(" ", "") if x.isalnum()).lower()
+        return newString == "".join(reversed(newString))
