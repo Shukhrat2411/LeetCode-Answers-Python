@@ -1,0 +1,17 @@
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        buyStock, sellStock = 0, 1
+        answer = 0
+
+        while sellStock < len(prices):
+
+            if prices[buyStock] < prices[sellStock]:
+                profit = prices[sellStock] - prices[buyStock]
+                answer = max(answer, profit)
+            
+            else:
+                buyStock = sellStock
+            
+            sellStock += 1
+        
+        return answer
