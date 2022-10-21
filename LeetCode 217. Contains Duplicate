@@ -1,0 +1,5 @@
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        # set() is an unordered collection data type that is iterable, mutable and has no duplicate elements.
+
+        return True if len(set(nums)) != len(nums) else False
