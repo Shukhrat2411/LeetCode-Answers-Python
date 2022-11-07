@@ -1,0 +1,14 @@
+class Solution:
+    def fib(self, n: int) -> int:
+        answer = 0
+        zero = 0
+        one = 1
+
+        if n == 1: return n
+
+        for x in range(n-1):
+            answer = zero + one
+            zero = one
+            one = answer
+        
+        return answer
